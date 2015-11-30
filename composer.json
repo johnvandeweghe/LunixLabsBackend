@@ -1,0 +1,18 @@
+{
+    "name": "johnvandeweghe/lunixlabs-backend",
+    "authors": [
+        {
+            "name": "John VanDeWeghe",
+            "email": "vandeweghe@lunixlabs.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/johnvandeweghe/LunixREST.git"
+        }
+    ],
+    "require": {
+        "johnvandeweghe/lunixrest": "dev-master"
+    }
+}
