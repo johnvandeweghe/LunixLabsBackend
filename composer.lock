@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnvandeweghe/LunixREST.git",
-                "reference": "99eead8e5973fbdf94788800799591aa47172043"
+                "reference": "b0b91edc2990ace5a93184699c54e445c2b10257"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnvandeweghe/LunixREST/zipball/99eead8e5973fbdf94788800799591aa47172043",
-                "reference": "99eead8e5973fbdf94788800799591aa47172043",
+                "url": "https://api.github.com/repos/johnvandeweghe/LunixREST/zipball/b0b91edc2990ace5a93184699c54e445c2b10257",
+                "reference": "b0b91edc2990ace5a93184699c54e445c2b10257",
                 "shasum": ""
             },
             "require-dev": {
@@ -41,7 +41,7 @@
                 "source": "https://github.com/johnvandeweghe/LunixREST/tree/master",
                 "issues": "https://github.com/johnvandeweghe/LunixREST/issues"
             },
-            "time": "2015-11-30 07:03:04"
+            "time": "2015-11-30 07:47:43"
         }
     ],
     "packages-dev": [],

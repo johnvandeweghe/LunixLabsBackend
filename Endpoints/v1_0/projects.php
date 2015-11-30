@@ -1,5 +1,5 @@
 <?php
-namespace HelloWorld\Endpoints\v1_0;
+namespace LunixLabs\Endpoints\v1_0;
 
 use LunixREST\Endpoints\Endpoint;
 

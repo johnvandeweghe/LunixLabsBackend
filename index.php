@@ -1,4 +1,9 @@
 <?php
+header("Access-Control-Allow-Headers: Content-Type");
+header("Access-Control-Allow-Methods: GET, POST, PUT, OPTIONS");
+header("Access-Control-Allow-Origin: *");
+error_reporting(E_ALL);
+
 require("vendor/autoload.php");
 
 require("Endpoints/v1_0/projects.php");
