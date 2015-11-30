@@ -1,15 +1,15 @@
 <?php
 require("vendor/autoload.php");
 
-require("Endpoints/v1_0/helloworld.php");
+require("Endpoints/v1_0/projects.php");
 
 $accessControl = new \LunixREST\AccessControl\PublicAccessControl("public");
 $throttle = new \LunixREST\Throttle\NoThrottle();
 $formatsConfig = new \LunixREST\Configuration\INIConfiguration("config/formats.ini");
-$router = new \LunixREST\Router\Router($accessControl, $throttle, $formatsConfig, "HelloWorld");
+$router = new \LunixREST\Router\Router($accessControl, $throttle, $formatsConfig, "LunixLabs");
 
 try {
-	$request = new \LunixREST\Request\Request("GET", [], [], '127.0.0.1', "/1.0/public/helloworld.json");//new \LunixREST\Request\Request($_SERVER['REQUEST_METHOD'], getallheaders(), $_REQUEST, $_SERVER['REMOTE_ADDR'], $_SERVER['REQUEST_URI']);
+	$request = new \LunixREST\Request\Request($_SERVER['REQUEST_METHOD'], getallheaders(), $_REQUEST, $_SERVER['REMOTE_ADDR'], $_SERVER['REQUEST_URI']);
 
 	try {
 		echo $router->handle($request);
