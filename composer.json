@@ -14,5 +14,10 @@
     ],
     "require": {
         "johnvandeweghe/lunixrest": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "LunixLabs\\": "src"
+        }
     }
 }

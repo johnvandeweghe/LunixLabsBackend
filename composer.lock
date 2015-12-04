@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "de4c0798470318fee94d81a80518c23f",
+    "hash": "d02f56477f0996c5707c01917dcf6297",
     "content-hash": "a6888fa690464413a5e66b08b9bb41af",
     "packages": [
         {
@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnvandeweghe/LunixREST.git",
-                "reference": "b0b91edc2990ace5a93184699c54e445c2b10257"
+                "reference": "51d2f60c2fd7eb5ac7643f88794d62e3560cf3eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnvandeweghe/LunixREST/zipball/b0b91edc2990ace5a93184699c54e445c2b10257",
-                "reference": "b0b91edc2990ace5a93184699c54e445c2b10257",
+                "url": "https://api.github.com/repos/johnvandeweghe/LunixREST/zipball/51d2f60c2fd7eb5ac7643f88794d62e3560cf3eb",
+                "reference": "51d2f60c2fd7eb5ac7643f88794d62e3560cf3eb",
                 "shasum": ""
             },
             "require-dev": {
@@ -41,7 +41,7 @@
                 "source": "https://github.com/johnvandeweghe/LunixREST/tree/master",
                 "issues": "https://github.com/johnvandeweghe/LunixREST/issues"
             },
-            "time": "2015-11-30 07:47:43"
+            "time": "2015-12-04 08:03:48"
         }
     ],
     "packages-dev": [],
