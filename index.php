@@ -6,13 +6,30 @@ error_reporting(E_ALL);
 
 require("vendor/autoload.php");
 
+use Doctrine\ORM\Tools\Setup;
+use Doctrine\ORM\EntityManager;
+
+$paths = array("src/Entities/");
+$isDevMode = false;
+
+// the connection configuration
+$dbParams = array(
+    'driver'   => 'pdo_mysql',
+    'user'     => 'lunixlabs',
+    'password' => 'supercool',
+    'dbname'   => 'lunixlabs',
+);
+
+$config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode);
+$entityManager = EntityManager::create($dbParams, $config);
+
 $accessControl = new \LunixREST\AccessControl\PublicAccessControl("public");
 $throttle = new \LunixREST\Throttle\NoThrottle();
 $formatsConfig = new \LunixREST\Configuration\INIConfiguration("config/formats.ini");
 $router = new \LunixREST\Router\Router($accessControl, $throttle, $formatsConfig, "LunixLabs");
 
 try {
-	$request = new \LunixLabs\Request\PublicRequest($_SERVER['REQUEST_METHOD'], getallheaders(), $_REQUEST, $_SERVER['REMOTE_ADDR'], $_SERVER['REQUEST_URI']);
+	$request = \LunixLabs\Request\PublicRequest::createFromURL($_SERVER['REQUEST_METHOD'], getallheaders(), $_REQUEST, $_SERVER['REMOTE_ADDR'], $_SERVER['REQUEST_URI']);
 
 	try {
         echo $router->handle($request);

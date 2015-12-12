@@ -13,7 +13,8 @@
         }
     ],
     "require": {
-        "johnvandeweghe/lunixrest": "dev-master"
+        "johnvandeweghe/lunixrest": "dev-master",
+        "doctrine/orm": "*"
     },
     "autoload": {
         "psr-4": {

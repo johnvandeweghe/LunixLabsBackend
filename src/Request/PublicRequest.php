@@ -7,25 +7,27 @@ namespace LunixLabs\Request;
  */
 class PublicRequest extends \LunixREST\Request\Request
 {
-    public static function createFromURL($url){
+    public static function createFromURL($method, array $headers, array $data, $ip, $url){
         $splitURL = explode('/', trim($url, '/'));
-        var_dump($splitURL);
+
         if(count($splitURL) < 2){
             throw new \LunixREST\Exceptions\InvalidRequestFormatException();
         }
-        $this->apiKey = "public";
+        $apiKey = "public";
 
         //Find endpoint
-        $this->version = $splitURL[0];
-        $this->endpoint = $splitURL[1];
+        $version = $splitURL[0];
+        $endpoint = $splitURL[1];
 
         $splitExtension = explode('.', $splitURL[count($splitURL) - 1]);
-        $this->extension = array_pop($splitExtension);
+        $extension = array_pop($splitExtension);
 
         if(count($splitURL) == 3){
-            $this->instance = implode('.', $splitExtension);
+            $instance = implode('.', $splitExtension);
         } else {
-            $this->endpoint = implode('.', $splitExtension);
+            $endpoint = implode('.', $splitExtension);
         }
+
+        return new PublicRequest($method, $headers, $data, $ip, $version, $apiKey, $endpoint, $extension, $instance);
     }
 }
