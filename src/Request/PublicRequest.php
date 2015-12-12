@@ -28,6 +28,6 @@ class PublicRequest extends \LunixREST\Request\Request
             $endpoint = implode('.', $splitExtension);
         }
 
-        return new PublicRequest($method, $headers, $data, $ip, $version, $apiKey, $endpoint, $extension, $instance);
+        return new PublicRequest($method, $headers, $data, $ip, $version, $apiKey, $endpoint, $extension, isset($instance) ? $instance : null);
     }
 }

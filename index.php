@@ -9,7 +9,7 @@ require("vendor/autoload.php");
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
-$paths = array("src/Entities/");
+$paths = array("/src/Entities");
 $isDevMode = false;
 
 // the connection configuration
@@ -26,7 +26,7 @@ $entityManager = EntityManager::create($dbParams, $config);
 $accessControl = new \LunixREST\AccessControl\PublicAccessControl("public");
 $throttle = new \LunixREST\Throttle\NoThrottle();
 $formatsConfig = new \LunixREST\Configuration\INIConfiguration("config/formats.ini");
-$router = new \LunixREST\Router\Router($accessControl, $throttle, $formatsConfig, "LunixLabs");
+$router = new \LunixREST\Router\DoctrineRouter($accessControl, $throttle, $formatsConfig, "LunixLabs", $entityManager);
 
 try {
 	$request = \LunixLabs\Request\PublicRequest::createFromURL($_SERVER['REQUEST_METHOD'], getallheaders(), $_REQUEST, $_SERVER['REMOTE_ADDR'], $_SERVER['REQUEST_URI']);
@@ -46,6 +46,7 @@ try {
 	} catch(\LunixREST\Exceptions\InvalidResponseFormatException $e){
 		header('500 Internal Server Error', true, 500);
 	} catch(\Exception $e){
+        var_dump($e);
 		header('500 Internal Server Error', true, 500);
 	}
 } catch(\LunixREST\Exceptions\InvalidRequestFormatException $e){

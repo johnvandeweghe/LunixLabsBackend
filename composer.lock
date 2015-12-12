@@ -613,12 +613,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnvandeweghe/LunixREST.git",
-                "reference": "51d2f60c2fd7eb5ac7643f88794d62e3560cf3eb"
+                "reference": "de23488db6c8e101ae6248f4a456f98bb57191a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnvandeweghe/LunixREST/zipball/51d2f60c2fd7eb5ac7643f88794d62e3560cf3eb",
-                "reference": "51d2f60c2fd7eb5ac7643f88794d62e3560cf3eb",
+                "url": "https://api.github.com/repos/johnvandeweghe/LunixREST/zipball/de23488db6c8e101ae6248f4a456f98bb57191a5",
+                "reference": "de23488db6c8e101ae6248f4a456f98bb57191a5",
                 "shasum": ""
             },
             "require-dev": {
@@ -641,7 +641,7 @@
                 "source": "https://github.com/johnvandeweghe/LunixREST/tree/master",
                 "issues": "https://github.com/johnvandeweghe/LunixREST/issues"
             },
-            "time": "2015-12-04 08:03:48"
+            "time": "2015-12-12 08:53:04"
         },
         {
             "name": "symfony/console",
