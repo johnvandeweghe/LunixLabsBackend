@@ -46,7 +46,6 @@ try {
 	} catch(\LunixREST\Exceptions\InvalidResponseFormatException $e){
 		header('500 Internal Server Error', true, 500);
 	} catch(\Exception $e){
-        var_dump($e);
 		header('500 Internal Server Error', true, 500);
 	}
 } catch(\LunixREST\Exceptions\InvalidRequestFormatException $e){

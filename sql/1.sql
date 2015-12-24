@@ -10,4 +10,4 @@ INSERT INTO projects (name, url, short_description, description) VALUES
     ("AES Seizure Prediction", "https://github.com/johnvandeweghe/AESSeizurePrediction", "An unofficial entry to a Kaggle Competition", ""),
     ("JohnNet", "https://github.com/johnvandeweghe/JohnNet", "A Publish/Subscribe (pubsub) service written using php's pthreads", ""),
     ("LunixLabs Front End", "https://github.com/johnvandeweghe/LunixLabsFront", "The front end code for this website", ""),
-    ("LunixLabs Back End", "https://github.com/johnvandeweghe/LunixLabsBack", "The back end code for this website", "");
+    ("LunixLabs Back End", "https://github.com/johnvandeweghe/LunixLabsBackend", "The back end code for this website", "");
